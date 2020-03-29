@@ -1,0 +1,1 @@
+let choose = document.getElementById("emprestimo");
