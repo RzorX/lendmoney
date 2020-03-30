@@ -111,6 +111,19 @@ button.valores1{
     border-radius: 10px;
 }
 
+button.simular_emprestimo{
+    padding: 0px;
+    font: bold 22px/24px arial, helvica, sans-serif;
+    text-align: center;
+    border-style: solid;
+    color: #fff;
+    background-color: #ff7200;
+    border-bottom-color: #ffffff;
+    width: 240px;
+    height: 44px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
 div.outro_valor{
     margin-top: 50px;
 }
