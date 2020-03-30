@@ -108,6 +108,7 @@ button.valores1{
     border-bottom-color: #ffffff;
     width: 140px;
     height: 54px;
+    border-radius: 10px;
 }
 
 div.outro_valor{
