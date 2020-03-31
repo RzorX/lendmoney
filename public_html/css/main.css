@@ -131,6 +131,7 @@ div.outro_valor{
 div.infos{
     margin-top: 120px;
     background-color: #f2f2f2;
+    margin-bottom: -30px;
 }
 
 div.fazersimulacaoF{
@@ -138,3 +139,17 @@ div.fazersimulacaoF{
     margin-bottom: 30px;
 }
 
+div.AboutUs{
+    height: 448px;
+    min-height: 2.5rem;
+    display: flex;
+    background-color: #ff7200;
+}
+
+div.Us{
+    background-color: #ff7200;
+}
+
+h1.Itander{
+    
+}
