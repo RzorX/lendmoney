@@ -179,3 +179,12 @@ div.about3{
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+button.singup{
+    margin-top: 15px;
+    background-color: #ff7200;
+    border-radius: 5px;
+    text-align: center;
+    border-color: #ff7200;
+    color: #fff;
+}
