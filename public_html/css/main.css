@@ -180,6 +180,10 @@ div.about3{
     margin-bottom: 50px;
 }
 
+div.account{
+
+}
+
 button.singup{
     margin-top: 15px;
     background-color: #ff7200;
@@ -187,8 +191,8 @@ button.singup{
     text-align: center;
     border-color: #ff7200;
     color: #fff;
-    padding-bottom: 8px;
+    padding-bottom: 7px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 8px;
+    padding-top: 7px;
 }
