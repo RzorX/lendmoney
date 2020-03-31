@@ -187,4 +187,8 @@ button.singup{
     text-align: center;
     border-color: #ff7200;
     color: #fff;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
 }
