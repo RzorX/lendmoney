@@ -139,17 +139,43 @@ div.fazersimulacaoF{
     margin-bottom: 30px;
 }
 
-div.AboutUs{
-    height: 448px;
+div.aboutus{
     min-height: 2.5rem;
     display: flex;
     background-color: #ff7200;
 }
 
-div.Us{
+div.us{
     background-color: #ff7200;
+    margin-left: 40px;
 }
 
-h1.Itander{
-    
+h1.itander{
+    margin-top: 60px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 50px;
+}
+
+h2.slogan{
+    font-weight: bold;
+    color: #fff;
+    font-size: 40px;
+}
+
+p.about{
+    margin-top: 20px;
+    color: #fff;
+    font-size: 20px;
+}
+
+p.about2{
+    margin-top: 20px;
+    color: #fff;
+    font-size: 20px;
+}
+
+div.about3{
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
