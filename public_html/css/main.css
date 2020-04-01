@@ -185,11 +185,14 @@ div.account{
 }
 
 button.singup{
+    margin-left: 5px;
+    font: 14px arial;
     margin-top: 15px;
     background-color: #ff7200;
     border-radius: 5px;
     text-align: center;
     border-color: #ff7200;
+    border-bottom-color: #ff7200;
     color: #fff;
     padding-bottom: 7px;
     padding-left: 15px;
