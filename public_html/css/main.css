@@ -148,6 +148,7 @@ div.aboutus{
 div.us{
     background-color: #ff7200;
     margin-left: 40px;
+    margin-right: 40px;
 }
 
 h1.itander{
@@ -180,12 +181,7 @@ div.about3{
     margin-bottom: 50px;
 }
 
-div.account{
-
-}
-
 button.singup{
-    margin-left: 5px;
     font: 14px arial;
     margin-top: 15px;
     background-color: #ff7200;
