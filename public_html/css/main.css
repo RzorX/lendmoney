@@ -272,6 +272,10 @@ p.tq{
     text-align: center;
 }
 
+div.voltar{
+    margin-top: 40px;
+}
+
 a.nossa-equipe{
     font: bold 22px/24px arial;
     color: #fff;
