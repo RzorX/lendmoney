@@ -235,3 +235,51 @@ a.Conheca{
     border-radius: 10px;
 }
 
+h2.infostitle{
+    font: bold 38px/40px arial;
+}
+
+div.team{
+    object-position: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+div.team2{
+    margin-top: 10px;
+    margin-left: -10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline;
+}
+
+picture.teamphoto{
+    margin-top: 10px;
+    display: inline-table;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+img.photo{
+    width: 350px;
+    height: 180.828px;
+}
+
+p.tq{
+    margin-top: 30px;
+    text-align: center;
+}
+
+a.nossa-equipe{
+    font: bold 22px/24px arial;
+    color: #fff;
+    background-color: #ff7200;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+}
+
