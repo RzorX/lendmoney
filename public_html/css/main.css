@@ -54,6 +54,16 @@ div.a{
     margin-right: 10px;
 }
 
+h1.mis{
+    font: 42px/44px arial;
+    text-align: center;
+    color: black;
+}
+
+div.mission-class{
+    margin-top: 100px;
+}
+
 h3.emp{
     font-weight: bold;
     width: 200px;
