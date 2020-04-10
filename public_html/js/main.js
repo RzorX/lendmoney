@@ -17,5 +17,17 @@ function calcparcelas() {
 }
 
 function digitarvalor() {
-    var valor;
+    var a = "R$ 10.000";
+    var b = "R$ 20.000";
+    var c = "R$ 30.000";
+    var d = "R$ 40.000";
+    var e = "R$ 50.000";
+    var f = "Outro Valor";
+    document.getElementById("10k").innerHTML = a;
+    document.getElementById("20k").innerHTML = b;
+    document.getElementById("30k").innerHTML = c;
+    document.getElementById("40k").innerHTML = d;
+    document.getElementById("50k").innerHTML = e;
+    document.getElementById("value_alt").innerHTML = f;
+    document.getElementById("parc").innerHTML = "Quanto você precisa?";
 }
