@@ -23,6 +23,21 @@ div.vantagens {
 }
 
 
+div.servicesvantagens {
+    margin-top: 50px;
+    text-align: center;
+}
+
+div.servicesvantagens2 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+div.servicesvantagens3 {
+    margin-top: 50px;
+    text-align: center;
+}
+
 div.valores-img {
     display: inline-block;
     margin-left: 15px;
@@ -70,15 +85,24 @@ h3.emp{
     text-align: left;
 }
 
+h3.serviceemp{
+    font-weight: bold;
+    text-align: left;
+}
+
 p.vantagem_sub{
     width: 200px;
     text-align: left;
     margin-bottom: 40px;
 }
 
-div.fazersimulacaoF{
+p.servicesvantagem_sub{
     text-align: center;
+    margin-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
+
 
 picture.fotos{
     margin-top: 10px;
@@ -165,6 +189,12 @@ div.infos{
     margin-bottom: -30px;
 }
 
+div.servicesinfo{
+    margin-top: 80px;
+    background-color: white;
+    margin-bottom: -30px;
+}
+
 div.oitander{
     margin-top: 60px;
     background-color: #f2f2f2;
@@ -174,6 +204,13 @@ div.oitander{
 div.fazersimulacaoF{
     margin-top: 30px;
     margin-bottom: 30px;
+    text-align: center;
+}
+
+div.fazersimulacaoFservices{
+    margin-top: 70px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 div.aboutus{
@@ -280,6 +317,11 @@ h2.infostitle{
     font: bold 38px/40px arial;
 }
 
+h2.servicestitle{
+    font: bold 38px/40px arial;
+    color: #ff7200;
+}
+
 div.team{
     object-position: center;
     margin-bottom: 10px;
@@ -288,7 +330,24 @@ div.team{
     margin-right: 10px;
 }
 
+
+div.teamservice{
+    object-position: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 div.team2{
+    margin-top: 10px;
+    margin-left: -10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline;
+}
+
+div.team2services{
     margin-top: 10px;
     margin-left: -10px;
     margin-right: 10px;
