@@ -10,7 +10,6 @@ Body{
 }
 span{
     font-size: 28px;
-    background-color: red;
 }
 
 div.vantagens {
@@ -387,3 +386,12 @@ a.nossa-equipe{
     border-radius: 10px;
 }
 
+div.ondeestamos{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.mapa {
+    height:400px;
+    margin-top: 40px;
+}

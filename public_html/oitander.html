@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nossa Equipe</title>
+        <title> O Itander </title>
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <link rel="stylesheet" href="css/bootstrap.min.css" media="All">
         <style>
@@ -85,7 +85,30 @@
                         Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
                 </div>
             </div>
+            <div class="ondeestamos">
+                <h1 class="end"> Nossa Localização </h1>
+            </div>
+            <div class="mapa" id="mapa"></div>
+            <script>
+                function inicializar() {
+                    var coordenadas = {lat: -23.600069, lng: -46.676961};
+                     
+                    var mapa = new google.maps.Map(document.getElementById('mapa'), {
+                        zoom: 15,
+                        center: coordenadas
+                    });
 
+                    var marker = new google.maps.Marker({
+                        position: coordenadas,
+                        map: mapa,
+                        title: 'Meu marcador'
+                    });
+                }
+            </script>
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzJ3UD8F_WY1M__cV41P_LcEaThfrNEaQ&callback=inicializar">
+            </script>
+            
             <div class="text-center container">
                 <div class="voltar">
                     <button class="voltar" onclick="window.location = 'index.html'"><strong> Voltar </strong></button>
@@ -93,12 +116,12 @@
             </div>
         </div>
 
-            <hr>
+        <hr>
 
-            <footer>
-                <p>&copy; Company 2015</p>
-            </footer>
-        </div>
+        <footer>
+            <p>&copy; Company 2015</p>
+        </footer>
+
     </body>
 
 </html>
