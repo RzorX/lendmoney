@@ -286,6 +286,22 @@ button.voltar{
     margin-bottom: 40px;
 }
 
+
+button.voltarcad{
+    padding: 0px;
+    font: bold 22px/24px arial, helvica, sans-serif;
+    text-align: center;
+    border-style: solid;
+    color: #fff;
+    background-color: #ff7200;
+    border-bottom-color: #ffffff;
+    width: 300px;
+    height: 44px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+
 div.equipe{
     margin-top: 100px;
 }

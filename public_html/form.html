@@ -12,12 +12,27 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" 
                 integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
         crossorigin="anonymous"></script>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="css/bootstrap.min.css" media="All">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css" media="All">
+        <link rel="stylesheet" href="css/main.css" media="All">
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
         <!--Masks-->
         <script type="text/javascript" src="js/jquery.mask.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
-                $("#cpf").mask("000.000.000-00")
+                $("#cpf").mask("000.000.000-00");
                 $("#rg").mask("000.000.000-W", {
                     translation: {
                         'W': {
@@ -25,22 +40,22 @@
                         }
                     },
                     reverse: true
-                })
-                $("#cep").mask("00.000-000")
-                $("#fixo").mask("(00) 0000-0000")
-                $("#cel").mask("(00) 0000-00009")
+                });
+                $("#cep").mask("00.000-000");
+                $("#fixo").mask("(00) 0000-0000");
+                $("#cel").mask("(00) 0000-00009");
                 $("#cel").blur(function (event) {
-                    if ($(this).val().length == 15) {
-                        $("#cel").mask("(00) 00000-0009")
+                    if ($(this).val().length === 15) {
+                        $("#cel").mask("(00) 00000-0009");
                     } else {
-                        $("#cel").mask("(00) 0000-00009")
+                        $("#cel").mask("(00) 0000-00009");
                     }
-                })
-                $("#conta").mask("0000000000")
-                $("#num").mask("0000")
-                $("#ag").mask("0000")
-                $("#dig").mask("0")
-            })
+                });
+                $("#conta").mask("0000000000");
+                $("#num").mask("0000");
+                $("#ag").mask("0000");
+                $("#dig").mask("0");
+            });
         </script>
 
         <!--Preenchimento automático-->
@@ -62,7 +77,7 @@
                     var cep = $(this).val().replace(/\D/g, '');
 
                     //Verifica se campo cep possui valor informado.
-                    if (cep != "") {
+                    if (cep !== "") {
 
                         //Expressão regular para validar o CEP.
                         var validacep = /^[0-9]{8}$/;
@@ -131,7 +146,7 @@
                         });
 
                         $.each(data, function (key, val) {
-                            if (val.sigla == str) {
+                            if (val.sigla === str) {
                                 $.each(val.cidades, function (key_city, val_city) {
                                     options_cidades += '<option value="' + val_city + '">' + val_city + '</option>';
                                 });
@@ -171,7 +186,9 @@
 
     <body>
 
-        <div class="background">
+        <div class="background" style="
+             top: 0px;
+             ">
             <div class="marca">
                 <a class="navbar-brand" href="#" onclick="window.location = 'index.html'">
                     <img
@@ -184,155 +201,306 @@
                         800px"
                         src="img/itander-white.png" alt="Empréstimos online">
                 </a>
-                <div class="titleform">
-                    <h1 class="infoform"> FAÇA SEU CADASTRO </h1>
-                </div>
             </div>
-                <div class="container" id="box">
-                    <form role="form">
-                        <fieldset>
+            <div class="container" id="box" style=" margin-top: 100px;">
+                <form role="form" id="form1" name="form1" action="form_success.html"                    
+                      onsubmit="return valida_form(this)">
+                    <fieldset>
 
-                            <br>
-                            <h4>Dados Pessoais</h4>
-                            <br>
-                            <div class="row">
-                                <div class="form-group col-lg-6">
-                                    <label for="exampleInputEmail1">Nome Completo</label>
-                                    <input type="text" class="form-control" placeholder="Insira seu nome aqui" autofocus>
-                                </div>
-                                <div class="form-group col-lg-3">
-                                    <label for="exampleInputEmail1">CPF</label>
-                                    <input type="text" class="form-control" placeholder="Informe seu CPF" id="cpf">
-                                </div>
-                                <div class="form-group col-lg-3">
-                                    <label for="exampleInputEmail1">RG</label>
-                                    <input type="text" class="form-control" placeholder="Informe seu RG" id="rg">
-                                </div>
+                        <br>
+                        <h4>Dados Pessoais</h4>
+                        <br>
+                        <div class="row">
+                            <div class="form-group col-lg-6">
+                                <label for="exampleInputEmail1">Nome Completo</label>
+                                <input type="text" class="form-control" placeholder="Insira seu nome aqui" autofocus id="nome">
                             </div>
-                            <div class="row">
-                                <div class="form-group col-lg-6">
-                                    <label for="exampleInputEmail1">E-mail</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Insira seu e-mail aqui">
-                                </div>
-                                <div class="form-group col-lg-3">
-                                    <label for="exampleInputEmail1">Senha</label>
-                                    <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Crie uma senha">
-                                </div>
-                                <div class="form-group col-lg-3">
-                                    <label for="exampleInputEmail1">Confirmar Senha</label>
-                                    <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Digite novamente a senha">
-                                </div>
+                            <div class="form-group col-lg-3">
+                                <label for="exampleInputEmail1">CPF</label>
+                                <input type="text" class="form-control" placeholder="Informe seu CPF" id="cpf">
                             </div>
-                            <div class="row">
-                                <div class="form-group col-lg-3">
-                                    <label for="exampleInputEmail1">Celular</label>
-                                    <input type="tel" class="form-control" placeholder="Ex.: (00) 0000-0000" id="cel">
-                                </div>
-                                <div class="form-group col-lg-3">
-                                    <label for="exampleInputEmail1">Telefone Fixo (Opcional)</label>
-                                    <input type="tel" class="form-control" placeholder="Ex.: (00) 0000-0000" id="fixo">
-                                </div>
-                                <div class="form-group col-lg-3">
-                                    <label for="exampleInputEmail1">Sexo</label>
-                                    <select class="form-control">
-                                        <option value="">Prefiro não informar</option>
-                                        <option value="">Masculino</option>
-                                        <option value="">Feminino</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-lg-3">
-                                    <label for="exampleInputEmail1">Data de nascimento</label>
-                                    <input type="date" class="form-control">
-                                </div>
+                            <div class="form-group col-lg-3">
+                                <label for="exampleInputEmail1">RG</label>
+                                <input type="text" class="form-control" placeholder="Informe seu RG" id="rg">
                             </div>
-
-                            <br>
-                            <h4>Endereço</h4>
-                            <br>
-                            <div class="row">
-                                <div class="form-group col-lg-2">
-                                    <label for="exampleInputEmail1">CEP</label>
-                                    <input type="text" class="form-control" placeholder="Insira seu CEP" id="cep">
-                                </div>
-                                <div class="form-group col-lg-6">
-                                    <label for="exampleInputEmail1">Endereço</label>
-                                    <input type="text" class="form-control" placeholder="Logradouro" id="rua">
-                                </div>
-                                <div class="form-group col-lg-1">
-                                    <label for="exampleInputEmail1">Número</label>
-                                    <input type="text" class="form-control input-sm" maxlength="5" id="num">
-                                </div>
-                                <div class="form-group col-lg-3">
-                                    <label for="exampleInputEmail1">Bairro</label>
-                                    <input type="text" class="form-control" placeholder="Bairro" id="bairro">
-                                </div>
-                                <div class="form-group col-lg-2">
-                                    <label for="exampleInputEmail1">Estado</label>
-                                    <select class="form-control" id="estados">
-                                        <option value=""></option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-lg-3">
-                                    <label for="exampleInputEmail1">Cidade</label>
-                                    <select class="form-control" id="cidades">
-                                        <option value=""></option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-lg-7">
-                                    <label for="exampleInputEmail1">Complemento (Opcional)</label>
-                                    <input type="text" class="form-control">
-                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-lg-6">
+                                <label for="exampleInputEmail1">E-mail</label>
+                                <input type="email" class="form-control" id="email" placeholder="Insira seu e-mail aqui">
                             </div>
+                            <div class="form-group col-lg-3">
+                                <label for="exampleInputEmail1">Senha</label>
+                                <input type="password" class="form-control" id="pass" placeholder="Crie uma senha">
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <label for="exampleInputEmail1">Confirmar Senha</label>
+                                <input type="password" class="form-control" id="pass_check" placeholder="Digite novamente a senha">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-lg-3">
+                                <label for="exampleInputEmail1">Celular</label>
+                                <input type="tel" class="form-control" placeholder="Ex.: (00) 0000-0000" id="cel">
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <label for="exampleInputEmail1">Telefone Fixo (Opcional)</label>
+                                <input type="tel" class="form-control" placeholder="Ex.: (00) 0000-0000" id="fixo">
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <label for="exampleInputEmail1">Sexo</label>
+                                <select class="form-control" id="genero">
+                                    <option value="indefinido">Prefiro não informar</option>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="feminino">Feminino</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <label for="exampleInputEmail1">Data de nascimento</label>
+                                <input type="date" class="form-control" id="nasc">
+                            </div>
+                        </div>
 
-                            <br>
-                            <h4>Dados Bancários</h4>
-                            <br>
-                            <div class="row">
-                                <div class="form-group col-lg-4">
-                                    <select class="form-control">
-                                        <option>Selecione o Banco</option>
-                                        <option>033 – Banco Santander (Brasil) S.A</option>
-                                        <option>341 – Banco Itaú S.A</option>
-                                        <option>652 – Itaú Unibanco Holding S.A</option>
-                                        <option>745 – Banco Citibank S.A</option>
-                                        <option>001 – Banco do Brasil S.A</option>
-                                        <option>104 – Caixa Econômica Federal</option>
-                                        <option>389 – Banco Mercantil do Brasil S.A</option>
-                                        <option>422 – Banco Safra S.A</option>
-                                    </select>
-                                </div>
+                        <br>
+                        <h4>Endereço</h4>
+                        <br>
+                        <div class="row">
+                            <div class="form-group col-lg-2">
+                                <label for="exampleInputEmail1">CEP</label>
+                                <input type="text" class="form-control" placeholder="Insira seu CEP" id="cep">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="exampleInputEmail1">Endereço</label>
+                                <input type="text" class="form-control" placeholder="Logradouro" id="rua">
+                            </div>
+                            <div class="form-group col-lg-1">
+                                <label for="exampleInputEmail1">Número</label>
+                                <input type="text" class="form-control input-sm" maxlength="5" id="num">
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <label for="exampleInputEmail1">Bairro</label>
+                                <input type="text" class="form-control" placeholder="Bairro" id="bairro">
+                            </div>
+                            <div class="form-group col-lg-2">
+                                <label for="exampleInputEmail1">Estado</label>
+                                <select class="form-control" id="estados">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <label for="exampleInputEmail1">Cidade</label>
+                                <select class="form-control" id="cidades">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-7">
+                                <label for="exampleInputEmail1">Complemento (Opcional)</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
 
-                                <div class="form-group col-lg-1">
-                                    <input type="text" class="form-control input-sm" placeholder="Ag." id="ag">
-                                </div>
-
-                                <div class="form-group col-lg-3">
-                                    <input type="text" class="form-control" placeholder="Conta" id="conta">
-                                </div>
-                                <div class="form-group col-lg-1">
-                                    <input type="text" class="form-control input-sm" placeholder="Dig." id="dig">
-                                </div>
-                                <div class="form-group col-lg-3">
-                                    <select class="form-control">
-                                        <option>Tipo de conta</option>
-                                        <option>Corrente</option>
-                                        <option>Poupança</option>
-                                    </select>
-                                </div>
-
-
+                        <br>
+                        <h4>Dados Bancários</h4>
+                        <br>
+                        <div class="row">
+                            <div class="form-group col-lg-4">
+                                <select class="form-control" id="banco">
+                                    <option value="">Selecione o Banco</option>
+                                    <option value="santader">033 – Banco Santander (Brasil) S.A</option>
+                                    <option value="itau">341 – Banco Itaú S.A</option>
+                                    <option value="itau holding">652 – Itaú Unibanco Holding S.A</option>
+                                    <option value="citibank">745 – Banco Citibank S.A</option>
+                                    <option value="banco do brasil">001 – Banco do Brasil S.A</option>
+                                    <option value="caixa">104 – Caixa Econômica Federal</option>
+                                    <option value="mercantil">389 – Banco Mercantil do Brasil S.A</option>
+                                    <option value="safra">422 – Banco Safra S.A</option>
+                                </select>
                             </div>
 
-                            <br>
-                            <div class="box-actions" align="right">
-                                <a class="btn btn-danger" href="index.html" role="button">Cancelar</a>
-                                <a type="submit" class="btn btn-primary" href="index.html" role="button">Criar Conta</a>
+                            <div class="form-group col-lg-1">
+                                <input type="text" class="form-control input-sm" placeholder="Ag." id="ag">
                             </div>
 
-                        </fieldset>
-                    </form>
+                            <div class="form-group col-lg-3">
+                                <input type="text" class="form-control" placeholder="Conta" id="conta">
+                            </div>
+                            <div class="form-group col-lg-1">
+                                <input type="text" class="form-control input-sm" placeholder="Dig." id="dig">
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <select class="form-control" id="tipoconta">
+                                    <option value="">Tipo de conta</option>
+                                    <option value="corrente">Corrente</option>
+                                    <option value="poupanca">Poupança</option>
+                                </select>
+                            </div>
+
+
+                        </div>
+
+                        <br>
+                        <div class="box-actions" align="right">
+                            <a class="btn btn-danger" href="index.html" role="button">Cancelar</a>
+                            <input type="submit"
+                                   id="envio"
+                                   class="btn btn-primary"
+                                   role="button" value="Criar Conta">
+                        </div>
+
+                    </fieldset>
+                </form>
+
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Modal Header</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Some text in the modal.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+
+                <script type="text/javascript" language="javascript">
+                    function valida_form() {                        
+                        if (document.getElementById("nome").value === "") {
+                            alert('Por favor, preencha o campo nome');
+                            document.getElementById("nome").focus();
+                            return false;
+                        }
+                        if (document.getElementById("cpf").value === "") {
+                            alert('Por favor, preencha o campo CPF');
+                            document.getElementById("cpf").focus();
+                            return false;
+                        }
+                        if (document.getElementById("rg").value === "") {
+                            alert('Por favor, preencha o campo RG');
+                            document.getElementById("rg").focus();
+                            return false;
+                        }
+                        if (document.getElementById("email").value === "") {
+                            alert('Por favor, preencha o campo e=mail');
+                            document.getElementById("email").focus();
+                            return false;
+                        }
+                        if (document.getElementById("pass").value === "") {
+                            alert('Por favor, preencha a sua senha');
+                            document.getElementById("pass").focus();
+                            return false;
+                        }
+                        if (document.getElementById("pass_check").value === "") {
+                            alert('Por favor, confirme a sua senha');
+                            document.getElementById("pass_check").focus();
+                            return false;
+                        }
+                        if (document.getElementById("pass").value !== document.getElementById("pass_check").value) {
+                            alert('Por favor, suas senhas não conferem');
+                            document.getElementById("pass_check").focus();
+                            return false;
+                        }
+
+                        if (document.getElementById("cel").value === "") {
+                            alert('Por favor, informe seu número de celular');
+                            document.getElementById("cel").focus();
+                            return false;
+                        }
+
+                        if (document.getElementById("genero").value === "") {
+                            alert('Por favor, informe seu genero');
+                            document.getElementById("genero").focus();
+                            return false;
+                        }
+
+                        if (document.getElementById("nasc").value === "") {
+                            alert('Por favor, informe sua data de nascimento');
+                            document.getElementById("nasc").focus();
+                            return false;
+                        }
+
+                        if (document.getElementById("cep").value === "") {
+                            alert('Por favor, informe seu CEP');
+                            document.getElementById("cep").focus();
+                            return false;
+                        }
+
+                        if (document.getElementById("rua").value === "") {
+                            alert('Por favor, informe sua rua');
+                            document.getElementById("rua").focus();
+                            return false;
+                        }
+
+                        if (document.getElementById("num").value === "") {
+                            alert('Por favor, informe o número de sua residencia/comercial');
+                            document.getElementById("num").focus();
+                            return false;
+                        }
+
+                        if (document.getElementById("bairro").value === "") {
+                            alert('Por favor, informe seu bairro');
+                            document.getElementById("bairro").focus();
+                            return false;
+                        }
+
+                        if (document.getElementById("estados").value === "") {
+                            alert('Por favor, informe seu estado');
+                            document.getElementById("estados").focus();
+                            return false;
+                        }
+
+                        if (document.getElementById("cidades").value === "") {
+                            alert('Por favor, informe sua cidade');
+                            document.getElementById("cidades").focus();
+                            return false;
+                        }
+
+                        if (document.getElementById("banco").value === "") {
+                            alert('Por favor, informe seu banco');
+                            document.getElementById("banco").focus();
+                            return false;
+                        }
+
+                        if (document.getElementById("ag").value === "") {
+                            alert('Por favor, informe sua agencia bancária');
+                            document.getElementById("ag").focus();
+                            return false;
+                        }
+
+                        if (document.getElementById("conta").value === "") {
+                            alert('Por favor, informe sua conta bancaria');
+                            document.getElementById("conta").focus();
+                            return false;
+                        }
+
+                        if (document.getElementById("dig").value === "") {
+                            alert('Por favor, informe o digito da sua conta bancaria');
+                            document.getElementById("dig").focus();
+                            return false;
+                        }
+
+                        if (document.getElementById("nasc").value === "") {
+                            alert('Por favor, informe sua data de nascimento');
+                            document.getElementById("nasc").focus();
+                            return false;
+                        }
+
+                        if (document.getElementById("tipoconta").value === "") {
+                            alert('Por favor, informe o tipo da sua conta bancaria');
+                            document.getElementById("tipoconta").focus();
+                            return false;
+                        }
+                    }
+                </script>
             </div>
+        </div>
     </body>
 
 </html>

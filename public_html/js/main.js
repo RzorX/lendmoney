@@ -32,3 +32,5 @@ var a = "R$ 10.000";
         document.getElementById("value_alt").innerHTML = f;
         document.getElementById("parc").innerHTML = "Quanto você precisa?";
         }
+        
+        
