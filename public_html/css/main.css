@@ -173,6 +173,8 @@ button.simular_emprestimo{
     border-radius: 10px;
     margin-bottom: 40px;
 }
+
+
 div.outro_valor{
     margin-top: 50px;
 }
@@ -394,4 +396,8 @@ div.ondeestamos{
 .mapa {
     height:400px;
     margin-top: 40px;
+}
+
+.listend{
+    text-align: center;
 }
