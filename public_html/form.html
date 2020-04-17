@@ -214,35 +214,35 @@
                         <div class="row">
                             <div class="form-group col-lg-6">
                                 <label for="exampleInputEmail1">Nome Completo</label>
-                                <input type="text" class="form-control" placeholder="Insira seu nome aqui" autofocus id="nome">
+                                <input type="text" class="form-control" placeholder="Insira seu nome aqui" autofocus id="nome" required>
                             </div>
                             <div class="form-group col-lg-3">
                                 <label for="exampleInputEmail1">CPF</label>
-                                <input type="text" class="form-control" placeholder="Informe seu CPF" id="cpf">
+                                <input type="text" class="form-control" placeholder="Informe seu CPF" id="cpf" required>
                             </div>
                             <div class="form-group col-lg-3">
                                 <label for="exampleInputEmail1">RG</label>
-                                <input type="text" class="form-control" placeholder="Informe seu RG" id="rg">
+                                <input type="text" class="form-control" placeholder="Informe seu RG" id="rg" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-lg-6">
                                 <label for="exampleInputEmail1">E-mail</label>
-                                <input type="email" class="form-control" id="email" placeholder="Insira seu e-mail aqui">
+                                <input type="email" class="form-control" id="email" placeholder="Insira seu e-mail aqui" required>
                             </div>
                             <div class="form-group col-lg-3">
                                 <label for="exampleInputEmail1">Senha</label>
-                                <input type="password" class="form-control" id="pass" placeholder="Crie uma senha">
+                                <input type="password" class="form-control" id="pass" placeholder="Crie uma senha" required>
                             </div>
                             <div class="form-group col-lg-3">
                                 <label for="exampleInputEmail1">Confirmar Senha</label>
-                                <input type="password" class="form-control" id="pass_check" placeholder="Digite novamente a senha">
+                                <input type="password" class="form-control" id="pass_check" placeholder="Digite novamente a senha" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-lg-3">
                                 <label for="exampleInputEmail1">Celular</label>
-                                <input type="tel" class="form-control" placeholder="Ex.: (00) 0000-0000" id="cel">
+                                <input type="tel" class="form-control" placeholder="Ex.: (00) 0000-0000" id="cel" required>
                             </div>
                             <div class="form-group col-lg-3">
                                 <label for="exampleInputEmail1">Telefone Fixo (Opcional)</label>
@@ -250,7 +250,8 @@
                             </div>
                             <div class="form-group col-lg-3">
                                 <label for="exampleInputEmail1">Sexo</label>
-                                <select class="form-control" id="genero">
+                                <select class="form-control" id="genero" required>
+                                    <option value="">Selecione</option>
                                     <option value="indefinido">Prefiro não informar</option>
                                     <option value="masculino">Masculino</option>
                                     <option value="feminino">Feminino</option>
@@ -258,7 +259,7 @@
                             </div>
                             <div class="form-group col-lg-3">
                                 <label for="exampleInputEmail1">Data de nascimento</label>
-                                <input type="date" class="form-control" id="nasc">
+                                <input type="date" class="form-control" id="nasc" required>
                             </div>
                         </div>
 
@@ -268,29 +269,29 @@
                         <div class="row">
                             <div class="form-group col-lg-2">
                                 <label for="exampleInputEmail1">CEP</label>
-                                <input type="text" class="form-control" placeholder="Insira seu CEP" id="cep">
+                                <input type="text" class="form-control" placeholder="Insira seu CEP" id="cep" required>
                             </div>
                             <div class="form-group col-lg-6">
                                 <label for="exampleInputEmail1">Endereço</label>
-                                <input type="text" class="form-control" placeholder="Logradouro" id="rua">
+                                <input type="text" class="form-control" placeholder="Logradouro" id="rua" required>
                             </div>
                             <div class="form-group col-lg-1">
                                 <label for="exampleInputEmail1">Número</label>
-                                <input type="text" class="form-control input-sm" maxlength="5" id="num">
+                                <input type="text" class="form-control input-sm" maxlength="5" id="num" required>
                             </div>
                             <div class="form-group col-lg-3">
                                 <label for="exampleInputEmail1">Bairro</label>
-                                <input type="text" class="form-control" placeholder="Bairro" id="bairro">
+                                <input type="text" class="form-control" placeholder="Bairro" id="bairro" required>
                             </div>
                             <div class="form-group col-lg-2">
                                 <label for="exampleInputEmail1">Estado</label>
-                                <select class="form-control" id="estados">
+                                <select class="form-control" id="estados" required>
                                     <option value=""></option>
                                 </select>
                             </div>
                             <div class="form-group col-lg-3">
                                 <label for="exampleInputEmail1">Cidade</label>
-                                <select class="form-control" id="cidades">
+                                <select class="form-control" id="cidades" required>
                                     <option value=""></option>
                                 </select>
                             </div>
@@ -305,7 +306,7 @@
                         <br>
                         <div class="row">
                             <div class="form-group col-lg-4">
-                                <select class="form-control" id="banco">
+                                <select class="form-control" id="banco" required>
                                     <option value="">Selecione o Banco</option>
                                     <option value="santader">033 – Banco Santander (Brasil) S.A</option>
                                     <option value="itau">341 – Banco Itaú S.A</option>
@@ -319,17 +320,17 @@
                             </div>
 
                             <div class="form-group col-lg-1">
-                                <input type="text" class="form-control input-sm" placeholder="Ag." id="ag">
+                                <input type="text" class="form-control input-sm" placeholder="Ag." id="ag" required>
                             </div>
 
                             <div class="form-group col-lg-3">
-                                <input type="text" class="form-control" placeholder="Conta" id="conta">
+                                <input type="text" class="form-control" placeholder="Conta" id="conta" required>
                             </div>
                             <div class="form-group col-lg-1">
-                                <input type="text" class="form-control input-sm" placeholder="Dig." id="dig">
+                                <input type="text" class="form-control input-sm" placeholder="Dig." id="dig" required>
                             </div>
                             <div class="form-group col-lg-3">
-                                <select class="form-control" id="tipoconta">
+                                <select class="form-control" id="tipoconta" required>
                                     <option value="">Tipo de conta</option>
                                     <option value="corrente">Corrente</option>
                                     <option value="poupanca">Poupança</option>
@@ -373,129 +374,9 @@
 
                 <script type="text/javascript" language="javascript">
                     function valida_form() {                        
-                        if (document.getElementById("nome").value === "") {
-                            alert('Por favor, preencha o campo nome');
-                            document.getElementById("nome").focus();
-                            return false;
-                        }
-                        if (document.getElementById("cpf").value === "") {
-                            alert('Por favor, preencha o campo CPF');
-                            document.getElementById("cpf").focus();
-                            return false;
-                        }
-                        if (document.getElementById("rg").value === "") {
-                            alert('Por favor, preencha o campo RG');
-                            document.getElementById("rg").focus();
-                            return false;
-                        }
-                        if (document.getElementById("email").value === "") {
-                            alert('Por favor, preencha o campo e=mail');
-                            document.getElementById("email").focus();
-                            return false;
-                        }
-                        if (document.getElementById("pass").value === "") {
-                            alert('Por favor, preencha a sua senha');
-                            document.getElementById("pass").focus();
-                            return false;
-                        }
-                        if (document.getElementById("pass_check").value === "") {
-                            alert('Por favor, confirme a sua senha');
-                            document.getElementById("pass_check").focus();
-                            return false;
-                        }
                         if (document.getElementById("pass").value !== document.getElementById("pass_check").value) {
                             alert('Por favor, suas senhas não conferem');
                             document.getElementById("pass_check").focus();
-                            return false;
-                        }
-
-                        if (document.getElementById("cel").value === "") {
-                            alert('Por favor, informe seu número de celular');
-                            document.getElementById("cel").focus();
-                            return false;
-                        }
-
-                        if (document.getElementById("genero").value === "") {
-                            alert('Por favor, informe seu genero');
-                            document.getElementById("genero").focus();
-                            return false;
-                        }
-
-                        if (document.getElementById("nasc").value === "") {
-                            alert('Por favor, informe sua data de nascimento');
-                            document.getElementById("nasc").focus();
-                            return false;
-                        }
-
-                        if (document.getElementById("cep").value === "") {
-                            alert('Por favor, informe seu CEP');
-                            document.getElementById("cep").focus();
-                            return false;
-                        }
-
-                        if (document.getElementById("rua").value === "") {
-                            alert('Por favor, informe sua rua');
-                            document.getElementById("rua").focus();
-                            return false;
-                        }
-
-                        if (document.getElementById("num").value === "") {
-                            alert('Por favor, informe o número de sua residencia/comercial');
-                            document.getElementById("num").focus();
-                            return false;
-                        }
-
-                        if (document.getElementById("bairro").value === "") {
-                            alert('Por favor, informe seu bairro');
-                            document.getElementById("bairro").focus();
-                            return false;
-                        }
-
-                        if (document.getElementById("estados").value === "") {
-                            alert('Por favor, informe seu estado');
-                            document.getElementById("estados").focus();
-                            return false;
-                        }
-
-                        if (document.getElementById("cidades").value === "") {
-                            alert('Por favor, informe sua cidade');
-                            document.getElementById("cidades").focus();
-                            return false;
-                        }
-
-                        if (document.getElementById("banco").value === "") {
-                            alert('Por favor, informe seu banco');
-                            document.getElementById("banco").focus();
-                            return false;
-                        }
-
-                        if (document.getElementById("ag").value === "") {
-                            alert('Por favor, informe sua agencia bancária');
-                            document.getElementById("ag").focus();
-                            return false;
-                        }
-
-                        if (document.getElementById("conta").value === "") {
-                            alert('Por favor, informe sua conta bancaria');
-                            document.getElementById("conta").focus();
-                            return false;
-                        }
-
-                        if (document.getElementById("dig").value === "") {
-                            alert('Por favor, informe o digito da sua conta bancaria');
-                            document.getElementById("dig").focus();
-                            return false;
-                        }
-
-                        if (document.getElementById("nasc").value === "") {
-                            alert('Por favor, informe sua data de nascimento');
-                            document.getElementById("nasc").focus();
-                            return false;
-                        }
-
-                        if (document.getElementById("tipoconta").value === "") {
-                            alert('Por favor, informe o tipo da sua conta bancaria');
-                            document.getElementById("tipoconta").focus();
                             return false;
                         }
                     }
