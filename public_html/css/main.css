@@ -134,6 +134,7 @@ div.valores_button{
     display: inline-block;
     color: #ff7200;
     box-shadow: none;
+    margin-bottom: -20px;
 }
 
 div.botao{
@@ -144,6 +145,13 @@ div.botao{
     margin: 2px;
     padding: 0px;
     box-shadow: none;
+}
+
+p.escolhido{
+    font: bold 22px/24px arial, helvica, sans-serif;
+    color: black;
+    text-align: center;
+    margin-top: 30px;
 }
 
 button.valores1{
