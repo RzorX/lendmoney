@@ -44,19 +44,20 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <form class="navbar-form navbar-right" role="form">
-                        <div class="form-group">
+                        <div class="form-group" id="emaildiv">
                             <input type="text" placeholder="Email" class="form-control" style="
                                    margin-top: 15px;
-                                   width: 226px;" id="login">
+                                   width: 226px;" id="login" required>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" id="passdiv">
                             <input type="password" placeholder="Senha" class="form-control" style="
-                                   margin-top: 15px;" id="pass">
+                                   margin-top: 15px;" id="pass" required>
                         </div>
                         <button type="submit" class="btn btn-success" style="
-                                margin-top: 15px;">Entrar</button>
-                        <div class="form-group">
-                            <a class="btn btn-primary" href="form.html" role="button" style="margin-top: 15px;">Cadastrar</a>
+                                margin-top: 15px;" id="entrar">Entrar</button>
+                        <div class="form-group" id="cadastrardiv">
+                            <a class="btn btn-primary" href="form.html" role="button" style="margin-top: 15px;"
+                               id="cadastrar">Cadastrar</a>
                         </div>
                     </form>
                 </div>
@@ -285,7 +286,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer" style="text-align: center;">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                             <button type="button" class="btn btn-primary">Enviar</button>
                         </div>
@@ -338,24 +339,25 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body" id="form_emp">
                             <form>
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Nome</label>
-                                    <input type="text" class="form-control" id="recipient-name">
+                                    <input type="text" class="form-control" id="name" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">E-mail</label>
-                                    <input type="text" class="form-control" id="recipient-name">
+                                    <input type="text" class="form-control" id="email" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="message-text" class="col-form-label">CPF</label>
-                                    <textarea class="form-control" id="message-text"></textarea>
+                                    <input type="text" class="form-control" id="cpf" required>
+                                </div>
+                                <div class="modal-footer" style="text-align: center;">
+                                    <input type="submit" class="btn btn-primary" id="simularmodal"
+                                           role="button" value="Simular">
                                 </div>
                             </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">Simular</button>
                         </div>
                     </div>
                 </div>
@@ -376,6 +378,8 @@
         <script type="text/javascript">
                                        document.getElementById("parcempresitmo").hidden = true;
                                        document.getElementById("aceitocondições").disabled = true;
+                                       document.getElementById("empsolicitado").hidden = true;
+                                       document.getElementById("logado").hidden = true;
         </script>
         <script>
             (function (b, o, i, l, e, r) {
