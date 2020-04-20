@@ -95,7 +95,7 @@
                                 id="50k" value="R$50.000"><strong> R$ 50.000 </strong></button>
                     </div>
                     <div class="botao">
-                        <button class="valores1" type="button" onclick="window.location = 'formulario_emprestimo.html'"
+                        <button class="valores1" type="button" data-toggle="modal" data-target="#solicitaemprestimo_value"
                                 id="value_alt"><strong> Outro Valor </strong></button>
                     </div>
                 </div>
@@ -106,24 +106,29 @@
             <div class="valores_button">
                 <div class="botao">
                     <button class="valores1" type="button" data-toggle="modal" data-target="#solicitaemprestimo"
+                            onclick="enviaparc(value)"
                             id="6x" value="6x"><strong> 6X </strong></button>
                 </div>
                 <div class="botao">
                     <button class="valores1" type="button" data-toggle="modal" data-target="#solicitaemprestimo"
+                            onclick="enviaparc(value)"
                             id="8x" value="8x"><strong> 8X </strong></button>
                 </div>
                 <div class="botao">
                     <button class="valores1" type="button" data-toggle="modal" data-target="#solicitaemprestimo"
+                            onclick="enviaparc(value)"
                             id="12x" value="12x"><strong> 12X </strong></button>
                 </div>
                 <div class="valores1_button" style="
                      margin-bottom: 0px;">
                     <div class="botao">
                         <button class="valores1" type="button" data-toggle="modal" data-target="#solicitaemprestimo"
+                                onclick="enviaparc(value)"
                                 id="16x" value="16x"><strong> 16X </strong></button>
                     </div>
                     <div class="botao">
                         <button class="valores1" type="button" data-toggle="modal" data-target="#solicitaemprestimo"
+                                onclick="enviaparc(value)"
                                 id="24x" value="24x"><strong> 24X </strong></button>
                     </div>
                     <div class="botao">
@@ -352,6 +357,68 @@
                                 <div class="form-group">
                                     <label for="message-text" class="col-form-label">CPF</label>
                                     <input type="text" class="form-control" id="cpf" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Valor desejado</label>
+                                    <input type="text" class="form-control" id="valoremp" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" id="qtdparc_emp" disabled>
+                                        <option value="">Quantidade de parcelas</option>
+                                        <option value="6x"> 6x </option>
+                                        <option value="8x"> 8x </option>
+                                        <option value="12x"> 12x </option>
+                                        <option value="16x"> 16x </option>
+                                        <option value="24x"> 24x </option>
+                                    </select>
+                                </div>
+                                <div class="modal-footer" style="text-align: center;">
+                                    <input type="submit" class="btn btn-primary" id="simularmodal"
+                                           role="button" value="Simular">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="solicitaemprestimo_value" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="solicitaemprestimoLabel"><strong>PREENCHA OS CAMPOS ABAIXO
+                                    E SIMULE SEM COMPROMISSO.</strong></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" id="form_emp">
+                            <form>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Nome</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">E-mail</label>
+                                    <input type="text" class="form-control" id="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">CPF</label>
+                                    <input type="text" class="form-control" id="cpf" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Valor desejado</label>
+                                    <input type="text" class="form-control" id="valor" required>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" id="qtdparc" required>
+                                        <option value="">Quantidade de parcelas</option>
+                                        <option value="6X"> 6x </option>
+                                        <option value="8X"> 8x </option>
+                                        <option value="12X"> 12x </option>
+                                        <option value="16X"> 16x </option>
+                                        <option value="24X"> 24x </option>
+                                    </select>
                                 </div>
                                 <div class="modal-footer" style="text-align: center;">
                                     <input type="submit" class="btn btn-primary" id="simularmodal"
